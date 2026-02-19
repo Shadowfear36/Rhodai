@@ -93,8 +93,8 @@ export const metadata: Metadata = {
     title: 'Rhodai | Web Design, AI Integration & Lead Generation',
     description: 'Smart websites. Intelligent integrations. Automated growth.',
     images: ['/og-image.png'],
-    creator: '@rhodai',
-    site: '@rhodai',
+    creator: '@rhodai_',
+    site: '@rhodai_',
   },
 
   icons: {

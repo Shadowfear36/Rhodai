@@ -19,9 +19,10 @@ const organizationSchema = {
   description:
     'Rhodai provides web design, AI integration, software integration, and lead generation services to help businesses grow online.',
   sameAs: [
-    'https://twitter.com/rhodai',
+    'https://x.com/rhodai_',
+    'https://instagram.com/rhodai.ai',
     'https://linkedin.com/company/rhodai',
-    'https://github.com/rhodai',
+    'https://github.com/Shadowfear36',
   ],
   contactPoint: {
     '@type': 'ContactPoint',
