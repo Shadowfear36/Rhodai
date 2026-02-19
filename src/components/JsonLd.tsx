@@ -26,7 +26,7 @@ const organizationSchema = {
   ],
   contactPoint: {
     '@type': 'ContactPoint',
-    email: 'hello@rhodai.ai',
+    email: 'info@rhodai.ai',
     contactType: 'customer service',
     availableLanguage: 'English',
     hoursAvailable: 'Mo-Fr 09:00-18:00',

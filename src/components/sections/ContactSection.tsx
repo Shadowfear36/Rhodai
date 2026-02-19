@@ -13,7 +13,7 @@ const infoCards = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'hello@rhodai.ai',
+    value: 'info@rhodai.ai',
     sub: 'Best for detailed inquiries',
   },
   {
