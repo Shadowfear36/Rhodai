@@ -1,0 +1,153 @@
+import type { Service, ProcessStep, Stat, NavLink, PricingTier } from '@/types'
+
+export const SITE_NAME = 'Rhodai'
+export const SITE_TAGLINE = 'Smart websites. Intelligent integrations. Automated growth.'
+export const SITE_URL = 'https://rhodai.ai'
+
+export const NAV_LINKS: NavLink[] = [
+  { label: 'Services', href: '#services' },
+  { label: 'Process', href: '#process' },
+  { label: 'About', href: '#about' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'FAQ', href: '#faq' },
+]
+
+export const SERVICES: Service[] = [
+  {
+    id: 'web-design',
+    title: 'Web Design & SEO',
+    description:
+      'Conversion-optimized websites built for speed, search visibility, and real business results.',
+    icon: 'Globe',
+    accent: 'cyan',
+    features: [
+      'Custom responsive design',
+      'Core Web Vitals optimized',
+      'On-page SEO & schema markup',
+      'Google Analytics setup',
+      'CMS integration (if needed)',
+    ],
+  },
+  {
+    id: 'ai-integration',
+    title: 'AI Integration',
+    description:
+      'Embed LLMs, chatbots, and intelligent automation into your existing products and workflows.',
+    icon: 'Sparkles',
+    accent: 'violet',
+    features: [
+      'ChatGPT / Claude API integration',
+      'Custom AI agents & assistants',
+      'RAG pipelines & knowledge bases',
+      'AI-powered content generation',
+      'Local LLM deployment',
+    ],
+  },
+  {
+    id: 'software-integration',
+    title: 'Software Integration',
+    description:
+      'Connect your tools. CRMs, APIs, webhooks, and automation platforms bridged seamlessly.',
+    icon: 'GitMerge',
+    accent: 'cyan',
+    features: [
+      'REST & GraphQL API integrations',
+      'Zapier / Make.com workflows',
+      'CRM & data pipeline setup',
+      'Custom middleware & webhooks',
+      'Third-party platform connectors',
+    ],
+  },
+  {
+    id: 'lead-generation',
+    title: 'Automated Lead Generation',
+    description:
+      "We build and deploy a custom LeadFinder system for your business — your own AI-powered prospecting machine, running 24/7.",
+    icon: 'Target',
+    accent: 'violet',
+    badge: 'Built on LeadFinder',
+    features: [
+      'Custom-deployed AI lead discovery engine',
+      'Configured for your niche & target cities',
+      'Automated website audits & AI scoring',
+      'Outreach pipeline built into your workflow',
+      'You own it — no ongoing dependency on us',
+    ],
+  },
+]
+
+export const PROCESS_STEPS: ProcessStep[] = [
+  {
+    step: '01',
+    title: 'Discovery Call',
+    description:
+      'We learn your goals, current stack, and challenges in a focused 30-minute call.',
+  },
+  {
+    step: '02',
+    title: 'Strategy & Proposal',
+    description:
+      'A clear plan with defined scope, timeline, and transparent pricing. No surprises.',
+  },
+  {
+    step: '03',
+    title: 'Build & Integrate',
+    description:
+      'We build fast and keep you updated. Weekly check-ins, no radio silence.',
+  },
+  {
+    step: '04',
+    title: 'Launch & Grow',
+    description:
+      'Go live with confidence. We stay available post-launch for questions and iterations.',
+  },
+]
+
+export const STATS: Stat[] = [
+  { value: 5, suffix: '+', label: 'Years Experience' },
+  { value: 30, suffix: '+', label: 'Projects Delivered' },
+  { value: 100, suffix: '%', label: 'Client Satisfaction' },
+]
+
+export const PRICING_TIERS: PricingTier[] = [
+  {
+    name: 'Starter',
+    price: 'From $500',
+    description: 'Perfect for businesses that need a solid web presence fast.',
+    features: [
+      'Custom website design (up to 5 pages)',
+      'Mobile responsive & fast',
+      'On-page SEO setup',
+      'Contact form + Google Analytics',
+      '30-day post-launch support',
+    ],
+    cta: 'Get Started',
+  },
+  {
+    name: 'Growth',
+    price: 'From $1,500',
+    description: 'For businesses ready to scale with AI and automation.',
+    features: [
+      'Everything in Starter',
+      'AI chatbot or assistant integration',
+      'Software / CRM integration',
+      'Custom LeadFinder deployment',
+      'Monthly performance reporting',
+    ],
+    highlighted: true,
+    cta: 'Most Popular',
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom Quote',
+    description: 'Full-stack solutions tailored to complex needs.',
+    features: [
+      'Everything in Growth',
+      'Custom AI agent development',
+      'Multi-niche LeadFinder configuration',
+      'Dedicated ongoing retainer',
+      'Priority support & SLA',
+    ],
+    cta: "Let's Talk",
+  },
+]
