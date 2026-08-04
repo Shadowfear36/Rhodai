@@ -40,6 +40,7 @@ export interface PortfolioItem {
   description: string
   url: string
   image: string
+  video: string
   tags: string[]
   accent: 'cyan' | 'violet'
 }
