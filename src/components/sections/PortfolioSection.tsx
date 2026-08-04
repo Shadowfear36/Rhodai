@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Github, Layers, SquareTerminal, type LucideIcon } from 'lucide-react'
@@ -17,7 +17,15 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Layers,
 }
 
-function PortfolioMedia({ item, videoRef }: { item: PortfolioItem; videoRef: React.RefObject<HTMLVideoElement | null> }) {
+function PortfolioMedia({
+  item,
+  videoRef,
+  isPlaying,
+}: {
+  item: PortfolioItem
+  videoRef: React.RefObject<HTMLVideoElement | null>
+  isPlaying: boolean
+}) {
   // Icon-only placeholder — open source projects with no live screenshot
   if (item.icon) {
     const Icon = ICON_MAP[item.icon]
@@ -41,7 +49,7 @@ function PortfolioMedia({ item, videoRef }: { item: PortfolioItem; videoRef: Rea
     )
   }
 
-  // Video with no static screenshot — poster shows frame one until hovered
+  // Video with no static screenshot — poster shows frame one until played
   if (item.video && !item.image) {
     return (
       <div className="relative w-full aspect-[16/9] overflow-hidden border-b border-white/5">
@@ -59,7 +67,7 @@ function PortfolioMedia({ item, videoRef }: { item: PortfolioItem; videoRef: Rea
     )
   }
 
-  // Screenshot with a hover-to-play video overlay
+  // Screenshot with a video overlay that fades in while playing
   return (
     <div className="relative w-full aspect-[16/9] overflow-hidden border-b border-white/5">
       {item.image && (
@@ -79,7 +87,9 @@ function PortfolioMedia({ item, videoRef }: { item: PortfolioItem; videoRef: Rea
           loop
           playsInline
           preload="none"
-          className="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-300 ${
+            isPlaying ? 'opacity-100' : 'opacity-0'
+          }`}
         />
       )}
     </div>
@@ -89,20 +99,48 @@ function PortfolioMedia({ item, videoRef }: { item: PortfolioItem; videoRef: Rea
 function PortfolioCard({ item, index }: { item: PortfolioItem; index: number }) {
   const isGithub = item.url.includes('github.com')
   const videoRef = useRef<HTMLVideoElement>(null)
+  const cardRef = useRef<HTMLAnchorElement>(null)
+  const [isPlaying, setIsPlaying] = useState(false)
 
-  const handleEnter = () => {
+  const play = () => {
     const video = videoRef.current
     if (!video) return
+    setIsPlaying(true)
     video.currentTime = 0
     video.play().catch(() => {})
   }
 
-  const handleLeave = () => {
+  const stop = () => {
     const video = videoRef.current
     if (!video) return
+    setIsPlaying(false)
     video.pause()
     video.currentTime = 0
   }
+
+  // On touch devices there's no hover, so play/pause the video as it scrolls
+  // into and out of view instead.
+  useEffect(() => {
+    if (!item.video) return
+    const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    if (supportsHover) return
+
+    const el = cardRef.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          play()
+        } else {
+          stop()
+        }
+      },
+      { threshold: 0.6 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [item.video])
 
   return (
     <motion.div
@@ -113,15 +151,16 @@ function PortfolioCard({ item, index }: { item: PortfolioItem; index: number }) 
       transition={{ delay: index * 0.1 }}
     >
       <a
+        ref={cardRef}
         href={item.url}
         target="_blank"
         rel="noopener noreferrer"
         className="block h-full group"
-        onMouseEnter={item.video ? handleEnter : undefined}
-        onMouseLeave={item.video ? handleLeave : undefined}
+        onMouseEnter={item.video ? play : undefined}
+        onMouseLeave={item.video ? stop : undefined}
       >
         <Card glow={item.accent} className="h-full overflow-hidden flex flex-col gap-4">
-          <PortfolioMedia item={item} videoRef={videoRef} />
+          <PortfolioMedia item={item} videoRef={videoRef} isPlaying={isPlaying} />
 
           <div className="p-6 pt-0 flex flex-col gap-4 flex-1">
             <div className="flex items-start justify-between gap-2">
