@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/HeroSection'
 import ServicesSection from '@/components/sections/ServicesSection'
 import HowItWorksSection from '@/components/sections/HowItWorksSection'
 import AboutSection from '@/components/sections/AboutSection'
-import LeadFinderSection from '@/components/sections/LeadFinderSection'
+import PortfolioSection from '@/components/sections/PortfolioSection'
 import PricingSection from '@/components/sections/PricingSection'
 import FaqSection from '@/components/sections/FaqSection'
 import ContactSection from '@/components/sections/ContactSection'
@@ -27,7 +27,7 @@ export default function Home() {
         <ServicesSection />
         <HowItWorksSection />
         <AboutSection />
-        <LeadFinderSection />
+        <PortfolioSection />
         <PricingSection />
         <FaqSection />
         <ContactSection />

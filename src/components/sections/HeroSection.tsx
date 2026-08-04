@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
-      aria-label="Hero — Web Design, AI Integration & Lead Generation Services"
+      aria-label="Hero — Web Design, AI Integration & Software Integration Services"
     >
       {/* Three.js Neural Network Background */}
       <div className="absolute inset-0 z-0">
@@ -56,7 +56,7 @@ export default function HeroSection() {
           variants={fadeInUp}
           className="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto mb-10"
         >
-          Custom web design & SEO, AI integration, software automation, and AI-powered lead generation —
+          Custom web design & SEO, AI integration, and software automation —
           everything your business needs to grow, in one place.
         </motion.p>
 

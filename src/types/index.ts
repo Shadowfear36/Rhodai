@@ -34,6 +34,15 @@ export interface PricingTier {
   cta: string
 }
 
+export interface PortfolioItem {
+  id: string
+  title: string
+  description: string
+  url: string
+  tags: string[]
+  accent: 'cyan' | 'violet'
+}
+
 export type FormStatus = 'idle' | 'loading' | 'success' | 'error'
 
 export interface FormData {

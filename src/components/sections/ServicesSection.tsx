@@ -28,13 +28,13 @@ export default function ServicesSection() {
           Services Built to <GradientText>Drive Results</GradientText>
         </h2>
         <p className="mt-4 text-slate-400 max-w-xl mx-auto">
-          From your first website to a fully automated lead pipeline — we build and integrate
+          From your first website to fully integrated automation — we build and connect
           the systems that grow your business.
         </p>
       </motion.div>
 
       {/* Services grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {SERVICES.map((service, index) => (
           <ServiceCard key={service.id} service={service} index={index} />
         ))}

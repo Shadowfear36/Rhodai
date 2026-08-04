@@ -14,7 +14,7 @@ const terminalLines = [
   { prompt: '>', command: 'skills' },
   { output: "['Next.js', 'Python', 'FastAPI', 'LLMs', 'SEO']" },
   { prompt: '>', command: 'services' },
-  { output: "['Web Design', 'AI Integration', 'Lead Gen']" },
+  { output: "['Web Design', 'AI Integration', 'Automation']" },
   { prompt: '>', command: 'status' },
   { output: '✓ Available for projects', highlight: true },
 ]
@@ -49,12 +49,6 @@ export default function AboutSection() {
             I&apos;m a full-stack developer and AI builder who helps small and medium businesses
             modernize their digital presence — from sleek, fast websites to intelligent automation
             that saves hours every week.
-          </p>
-
-          <p className="text-slate-400 leading-relaxed">
-            I built LeadFinder, a proprietary AI tool that automates the entire process of finding,
-            scoring, and reaching out to potential clients. I use it for my own growth — and offer it
-            as a service to businesses that want a steady pipeline without the grind.
           </p>
 
           {/* Stats */}

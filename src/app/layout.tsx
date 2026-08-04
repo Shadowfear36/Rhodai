@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://rhodai.ai'),
 
   title: {
-    default: 'Rhodai | Web Design, AI Integration & Lead Generation',
+    default: 'Rhodai | Web Design, AI Integration & Software Integration',
     template: '%s | Rhodai',
   },
   description:
-    'Rhodai builds fast, conversion-optimized websites, integrates AI into your business workflows, connects your software tools, and deploys automated lead generation systems. Modern digital solutions for growing businesses.',
+    'Rhodai builds fast, conversion-optimized websites, integrates AI into your business workflows, and connects your software tools. Modern digital solutions for growing businesses.',
 
   keywords: [
     'web design',
@@ -39,7 +39,6 @@ export const metadata: Metadata = {
     'AI integration',
     'AI business automation',
     'software integration',
-    'lead generation service',
     'freelance web developer',
     'Next.js developer',
     'custom website design',
@@ -71,9 +70,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Rhodai | Web Design, AI Integration & Lead Generation',
+    title: 'Rhodai | Web Design, AI Integration & Software Integration',
     description:
-      'Fast websites, AI integrations, software automation, and AI-powered lead generation. Everything your business needs to scale.',
+      'Fast websites, AI integrations, and software automation. Everything your business needs to scale.',
     url: 'https://rhodai.ai',
     siteName: 'Rhodai',
     locale: 'en_US',
@@ -83,14 +82,14 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Rhodai — Web Design, AI Integration & Lead Generation',
+        alt: 'Rhodai — Web Design, AI Integration & Software Integration',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Rhodai | Web Design, AI Integration & Lead Generation',
+    title: 'Rhodai | Web Design, AI Integration & Software Integration',
     description: 'Smart websites. Intelligent integrations. Automated growth.',
     images: ['/og-image.png'],
     creator: '@rhodai_',

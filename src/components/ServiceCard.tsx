@@ -15,7 +15,6 @@ const SHAPE_MAP: Record<string, Shape> = {
   'web-design': 'sphere',
   'ai-integration': 'icosahedron',
   'software-integration': 'torus',
-  'lead-generation': 'octahedron',
 }
 
 const COLOR_MAP: Record<string, string> = {

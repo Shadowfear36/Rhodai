@@ -1,4 +1,4 @@
-import type { Service, ProcessStep, Stat, NavLink, PricingTier } from '@/types'
+import type { Service, ProcessStep, Stat, NavLink, PricingTier, PortfolioItem } from '@/types'
 
 export const SITE_NAME = 'Rhodai'
 export const SITE_TAGLINE = 'Smart websites. Intelligent integrations. Automated growth.'
@@ -8,6 +8,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'Services', href: '#services' },
   { label: 'Process', href: '#process' },
   { label: 'About', href: '#about' },
+  { label: 'Portfolio', href: '#portfolio' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
 ]
@@ -58,21 +59,35 @@ export const SERVICES: Service[] = [
       'Third-party platform connectors',
     ],
   },
+]
+
+export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
-    id: 'lead-generation',
-    title: 'Automated Lead Generation',
+    id: 'seqhort',
+    title: 'Sequoia Horticultural Products',
     description:
-      "We build and deploy a custom LeadFinder system for your business — your own AI-powered prospecting machine, running 24/7.",
-    icon: 'Target',
+      'A bulk bark and mulch supplier serving landscape architects and commercial growers across the Western U.S. since 1982.',
+    url: 'https://seqhort.pages.dev',
+    tags: ['Web Design', 'Agriculture'],
+    accent: 'cyan',
+  },
+  {
+    id: 'blairelectric',
+    title: 'Blair Electric Services',
+    description:
+      'A licensed electrical contractor serving agricultural, commercial, and industrial clients across California’s Central Valley.',
+    url: 'https://blairelectric.pages.dev',
+    tags: ['Web Design', 'Contracting'],
     accent: 'violet',
-    badge: 'Built on LeadFinder',
-    features: [
-      'Custom-deployed AI lead discovery engine',
-      'Configured for your niche & target cities',
-      'Automated website audits & AI scoring',
-      'Outreach pipeline built into your workflow',
-      'You own it — no ongoing dependency on us',
-    ],
+  },
+  {
+    id: 'waterspectrum',
+    title: 'WaterSpectrum',
+    description:
+      'A music production collective offering premium beats, studio sessions, mixing, and mastering for artists.',
+    url: 'https://waterspectrum.us',
+    tags: ['Web Design', 'Music'],
+    accent: 'cyan',
   },
 ]
 
@@ -131,7 +146,7 @@ export const PRICING_TIERS: PricingTier[] = [
       'Everything in Starter',
       'AI chatbot or assistant integration',
       'Software / CRM integration',
-      'Custom LeadFinder deployment',
+      'Ongoing feature enhancements',
       'Monthly performance reporting',
     ],
     highlighted: true,
@@ -144,7 +159,7 @@ export const PRICING_TIERS: PricingTier[] = [
     features: [
       'Everything in Growth',
       'Custom AI agent development',
-      'Multi-niche LeadFinder configuration',
+      'Multi-system automation builds',
       'Dedicated ongoing retainer',
       'Priority support & SLA',
     ],

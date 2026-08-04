@@ -11,27 +11,22 @@ const faqs = [
   {
     question: 'What services does Rhodai offer?',
     answer:
-      'Rhodai offers four core services: Web Design & SEO (custom responsive websites optimized for search), AI Integration (embedding LLMs and chatbots into your business), Software Integration (connecting your tools via APIs and automation platforms), and Automated Lead Generation — where we build and deploy a custom AI-powered prospecting system inside your business.',
+      'Rhodai offers three core services: Web Design & SEO (custom responsive websites optimized for search), AI Integration (embedding LLMs and chatbots into your business), and Software Integration (connecting your tools via APIs and automation platforms).',
   },
   {
     question: 'How much does a website cost?',
     answer:
-      'Website design starts from $500 for a custom 5-page responsive website with SEO setup. Growth packages including AI integration and a custom LeadFinder deployment start from $1,500. Enterprise solutions are priced on a custom quote basis. All projects start with a free discovery call.',
-  },
-  {
-    question: 'What is LeadFinder and how does it work for my business?',
-    answer:
-      "LeadFinder is an AI-powered prospecting engine built by Rhodai. Rather than delivering leads to you manually, we deploy a custom version of the system inside your own infrastructure — configured for your industry and target cities. It automatically discovers businesses, audits their websites, scores them with AI, and feeds qualified prospects into your outreach workflow. You own it outright with no ongoing fees to us.",
+      'Website design starts from $500 for a custom 5-page responsive website with SEO setup. Growth packages including AI integration and software integration start from $1,500. Enterprise solutions are priced on a custom quote basis. All projects start with a free discovery call.',
   },
   {
     question: 'Do I own the systems you build for me?',
     answer:
-      'Yes, completely. Every website, integration, or lead generation system we build is handed over to you at the end of the project. There are no lock-ins, no proprietary platforms that hold your data hostage, and no recurring fees payable to Rhodai unless you choose an ongoing support retainer.',
+      'Yes, completely. Every website or integration we build is handed over to you at the end of the project. There are no lock-ins, no proprietary platforms that hold your data hostage, and no recurring fees payable to Rhodai unless you choose an ongoing support retainer.',
   },
   {
     question: 'How long does a project take?',
     answer:
-      'Timelines vary by scope. A standard website typically takes 1–3 weeks. AI integrations and software integrations range from 1–6 weeks depending on complexity. A full LeadFinder deployment typically takes 2–4 weeks including configuration and testing. Every project starts with a free 30-minute discovery call where we set a realistic timeline.',
+      'Timelines vary by scope. A standard website typically takes 1–3 weeks. AI integrations and software integrations range from 1–6 weeks depending on complexity. Every project starts with a free 30-minute discovery call where we set a realistic timeline.',
   },
   {
     question: 'Can you integrate AI into my existing business tools?',

@@ -17,7 +17,7 @@ const organizationSchema = {
     height: 60,
   },
   description:
-    'Rhodai provides web design, AI integration, software integration, and lead generation services to help businesses grow online.',
+    'Rhodai provides web design, AI integration, and software integration services to help businesses grow online.',
   sameAs: [
     'https://x.com/rhodai_',
     'https://instagram.com/rhodai.ai',
@@ -52,9 +52,9 @@ const webPageSchema = {
   '@type': 'WebPage',
   '@id': `${SITE_URL}/#webpage`,
   url: SITE_URL,
-  name: 'Rhodai | Web Design, AI Integration & Lead Generation',
+  name: 'Rhodai | Web Design, AI Integration & Software Integration',
   description:
-    'Rhodai builds fast websites, integrates AI, connects software tools, and delivers targeted leads. Modern digital solutions for growing businesses.',
+    'Rhodai builds fast websites, integrates AI, and connects software tools. Modern digital solutions for growing businesses.',
   isPartOf: { '@id': `${SITE_URL}/#website` },
   about: { '@id': `${SITE_URL}/#organization` },
   breadcrumb: {
@@ -90,7 +90,6 @@ const personSchema = {
     'Next.js',
     'Python',
     'FastAPI',
-    'Lead Generation',
     'Software Integration',
   ],
 }
@@ -156,20 +155,6 @@ const servicesSchema = {
         areaServed: 'Worldwide',
       },
     },
-    {
-      '@type': 'ListItem',
-      position: 4,
-      item: {
-        '@type': 'Service',
-        '@id': `${SITE_URL}/#service-lead-generation`,
-        name: 'Automated Lead Generation System',
-        description:
-          'We build and deploy a custom AI-powered lead generation system inside your business, based on the proprietary LeadFinder engine. It automatically discovers, audits, and scores prospects in your niche and feeds them into your outreach workflow — fully automated and owned by you.',
-        provider: { '@id': `${SITE_URL}/#organization` },
-        serviceType: 'Lead Generation Automation',
-        areaServed: 'Worldwide',
-      },
-    },
   ],
 }
 
@@ -179,7 +164,7 @@ const howToSchema = {
   '@type': 'HowTo',
   name: 'How Rhodai Works: From Discovery to Launch',
   description:
-    'The simple, transparent process for working with Rhodai on your web design, AI integration, or lead generation project.',
+    'The simple, transparent process for working with Rhodai on your web design, AI integration, or software integration project.',
   totalTime: 'P2W',
   supply: [],
   tool: [],
@@ -225,7 +210,7 @@ const faqSchema = {
       name: 'What services does Rhodai offer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Rhodai offers four core services: Web Design & SEO (custom responsive websites optimized for search), AI Integration (embedding LLMs and chatbots into your business), Software Integration (connecting your tools via APIs and automation platforms), and Automated Lead Generation — where we build and deploy a custom AI-powered prospecting system inside your business using the proprietary LeadFinder engine.',
+        text: 'Rhodai offers three core services: Web Design & SEO (custom responsive websites optimized for search), AI Integration (embedding LLMs and chatbots into your business), and Software Integration (connecting your tools via APIs and automation platforms).',
       },
     },
     {
@@ -233,15 +218,7 @@ const faqSchema = {
       name: 'How much does a website cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Website design starts from $500 for a custom 5-page responsive website with SEO setup. Growth packages including AI integration and a custom LeadFinder deployment start from $1,500. Enterprise solutions are priced on a custom quote basis. All projects start with a free discovery call.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is LeadFinder and how does it work for my business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "LeadFinder is a proprietary AI-powered prospecting engine built by Rhodai. Rather than delivering leads manually, Rhodai deploys a custom version of the system inside your own infrastructure — configured for your industry and target cities. It automatically discovers businesses, audits their websites, scores them with AI, and feeds qualified prospects into your outreach workflow. You own it outright with no ongoing fees.",
+        text: 'Website design starts from $500 for a custom 5-page responsive website with SEO setup. Growth packages including AI integration and software integration start from $1,500. Enterprise solutions are priced on a custom quote basis. All projects start with a free discovery call.',
       },
     },
     {
