@@ -68,6 +68,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     description:
       'A bulk bark and mulch supplier serving landscape architects and commercial growers across the Western U.S. since 1982.',
     url: 'https://seqhort.pages.dev',
+    image: '/SeqHortScreenShot.png',
     tags: ['Web Design', 'Agriculture'],
     accent: 'cyan',
   },
@@ -77,6 +78,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     description:
       'A licensed electrical contractor serving agricultural, commercial, and industrial clients across California’s Central Valley.',
     url: 'https://blairelectric.pages.dev',
+    image: '/BlairElectricScreenShot.png',
     tags: ['Web Design', 'Contracting'],
     accent: 'violet',
   },
@@ -86,6 +88,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     description:
       'A music production collective offering premium beats, studio sessions, mixing, and mastering for artists.',
     url: 'https://waterspectrum.us',
+    image: '/WaterSpectrumScreenShot.png',
     tags: ['Web Design', 'Music'],
     accent: 'cyan',
   },
