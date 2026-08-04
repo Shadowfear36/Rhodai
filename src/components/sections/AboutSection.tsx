@@ -1,6 +1,8 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { Linkedin } from 'lucide-react'
 import SectionWrapper from '@/components/ui/SectionWrapper'
 import GradientText from '@/components/ui/GradientText'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
@@ -33,16 +35,27 @@ export default function AboutSection() {
           viewport={{ once: true, margin: '-60px' }}
           className="space-y-6"
         >
-          <div>
-            <p className="text-xs font-mono text-cyan-500 uppercase tracking-widest mb-3">
-              About Me
-            </p>
-            <h2
-              className="text-3xl sm:text-4xl font-bold text-white"
-              style={{ fontFamily: 'var(--font-space-grotesk)' }}
-            >
-              The Dev Behind <GradientText>Rhodai</GradientText>
-            </h2>
+          <div className="flex items-center gap-5">
+            <div className="relative w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-full overflow-hidden border border-cyan-500/30 shadow-[0_0_30px_rgba(6,182,212,0.15)]">
+              <Image
+                src="/Dylan.jpg"
+                alt="Dylan, founder of Rhodai"
+                fill
+                sizes="96px"
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <p className="text-xs font-mono text-cyan-500 uppercase tracking-widest mb-3">
+                About Me
+              </p>
+              <h2
+                className="text-3xl sm:text-4xl font-bold text-white"
+                style={{ fontFamily: 'var(--font-space-grotesk)' }}
+              >
+                The Dev Behind <GradientText>Rhodai</GradientText>
+              </h2>
+            </div>
           </div>
 
           <p className="text-slate-400 leading-relaxed">
@@ -50,6 +63,16 @@ export default function AboutSection() {
             modernize their digital presence — from sleek, fast websites to intelligent automation
             that saves hours every week.
           </p>
+
+          <a
+            href="https://www.linkedin.com/in/dylan-rhinehart/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-cyan-400 transition-colors w-fit"
+          >
+            <Linkedin className="w-4 h-4" />
+            Connect on LinkedIn
+          </a>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 pt-4 border-t border-white/5">
