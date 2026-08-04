@@ -95,6 +95,37 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     tags: ['Web Design', 'Music'],
     accent: 'cyan',
   },
+  {
+    id: 'statsync',
+    title: 'STATSYNC',
+    description:
+      'A real-time sports statistics platform that syncs live game data into a clean, fast dashboard for teams and fans.',
+    url: 'https://sportsync.rhodai.ai/',
+    video: '/STATSYNCRecording.mp4',
+    poster: '/STATSYNCPoster.jpg',
+    tags: ['Web Design', 'Sports Tech'],
+    accent: 'violet',
+  },
+  {
+    id: 'vmux',
+    title: 'vmux',
+    description:
+      'An open-source Windows terminal multiplexer built for running multiple AI coding agents in parallel — split panes, persistent workspaces, and git worktrees for isolated agent branches, built with Tauri, React, and Rust.',
+    url: 'https://github.com/Shadowfear36/vmux',
+    icon: 'SquareTerminal',
+    tags: ['Open Source', 'Rust', 'Tauri'],
+    accent: 'cyan',
+  },
+  {
+    id: 'seghiero',
+    title: 'SegHiero',
+    description:
+      'An open-source PyTorch framework for hierarchical semantic segmentation — predicting fine, coarse, and super-coarse labels together with ResNet + DeepLabV3+ backbones and hierarchy-aware loss functions.',
+    url: 'https://github.com/Shadowfear36/SegHiero',
+    icon: 'Layers',
+    tags: ['Open Source', 'Python', 'PyTorch'],
+    accent: 'violet',
+  },
 ]
 
 export const PROCESS_STEPS: ProcessStep[] = [

@@ -39,8 +39,10 @@ export interface PortfolioItem {
   title: string
   description: string
   url: string
-  image: string
-  video: string
+  image?: string
+  video?: string
+  poster?: string
+  icon?: string
   tags: string[]
   accent: 'cyan' | 'violet'
 }
