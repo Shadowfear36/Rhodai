@@ -88,7 +88,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     id: 'waterspectrum',
     title: 'WaterSpectrum',
     description:
-      'A music production collective offering premium beats, studio sessions, mixing, and mastering for artists.',
+      "A music production collective founded by DJ K.I.D — DaBaby's producer — offering premium beats, studio sessions, mixing, and mastering for artists.",
     url: 'https://waterspectrum.us',
     image: '/WaterSpectrumScreenShot.png',
     video: '/WaterSpectrumRecording.mp4',
