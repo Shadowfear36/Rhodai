@@ -67,7 +67,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Sequoia Horticultural Products',
     description:
       'A bulk bark and mulch supplier serving landscape architects and commercial growers across the Western U.S. since 1982.',
-    url: 'https://seqhort.pages.dev',
+    url: 'https://www.seqhort.com',
     image: '/SeqHortScreenShot.png',
     video: '/SeqHortRecording.mp4',
     tags: ['Web Design', 'Agriculture'],
