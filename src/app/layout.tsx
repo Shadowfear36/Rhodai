@@ -80,8 +80,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/og-image.png',
-        width: 1200,
-        height: 630,
+        width: 1672,
+        height: 941,
         alt: 'Rhodai — Web Design, AI Integration & Software Integration',
       },
     ],
