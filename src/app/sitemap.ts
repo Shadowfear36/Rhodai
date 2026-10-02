@@ -1,17 +1,10 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://rhodai.ai'
-  const now = new Date()
-
   return [
-    {
-      url: baseUrl,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 1.0,
-    },
+    { url: 'https://rhodai.ai/', changeFrequency: 'monthly', priority: 1 },
+    { url: 'https://rhodai.ai/privacy/', changeFrequency: 'yearly', priority: 0.2 },
   ]
 }

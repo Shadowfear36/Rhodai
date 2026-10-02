@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import Analytics from '@/components/Analytics'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -26,11 +27,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://rhodai.ai'),
 
   title: {
-    default: 'Rhodai | Web Design, AI Integration & Software Integration',
+    default: 'Rhodai | Custom Website Design & Development',
     template: '%s | Rhodai',
   },
   description:
-    'Rhodai builds fast, conversion-optimized websites, integrates AI into your business workflows, and connects your software tools. Modern digital solutions for growing businesses.',
+    'Custom website design and development for small and growing businesses. Work directly with Dylan to build a responsive website with thoughtful design and SEO foundations.',
 
   keywords: [
     'web design',
@@ -66,13 +67,13 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://rhodai.ai',
+    canonical: '/',
   },
 
   openGraph: {
-    title: 'Rhodai | Web Design, AI Integration & Software Integration',
+    title: 'Rhodai | Custom Website Design & Development',
     description:
-      'Fast websites, AI integrations, and software automation. Everything your business needs to scale.',
+      'Your business. Its next big move. Custom websites with thoughtful design, responsive development, and SEO foundations.',
     url: 'https://rhodai.ai',
     siteName: 'Rhodai',
     locale: 'en_US',
@@ -82,15 +83,15 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1672,
         height: 941,
-        alt: 'Rhodai — Web Design, AI Integration & Software Integration',
+        alt: 'Rhodai — Custom Website Design & Development',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Rhodai | Web Design, AI Integration & Software Integration',
-    description: 'Smart websites. Intelligent integrations. Automated growth.',
+    title: 'Rhodai | Custom Website Design & Development',
+    description: 'Thoughtful website design and development for growing businesses.',
     images: ['/og-image.png'],
     creator: '@rhodai_',
     site: '@rhodai_',
@@ -107,6 +108,9 @@ export const metadata: Metadata = {
   },
 
   category: 'technology',
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+  },
 }
 
 export default function RootLayout({
@@ -124,7 +128,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="bg-[#050508] text-slate-50 antialiased">{children}</body>
+      <body>{children}<Analytics /></body>
     </html>
   )
 }
