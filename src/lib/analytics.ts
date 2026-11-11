@@ -19,7 +19,7 @@ export function analyticsAllowed() {
 
 // Only send predefined labels. Never send form values or visitor identifiers.
 export function trackEvent(
-  name: 'contact_click' | 'project_click' | 'email_click' | 'generate_lead',
+  name: 'contact_click' | 'project_click' | 'project_preview' | 'email_click' | 'generate_lead',
   label: string,
 ) {
   if (!ANALYTICS_CONFIGURED || !analyticsAllowed()) return

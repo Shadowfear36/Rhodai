@@ -6,12 +6,9 @@ import Link from 'next/link'
 import { ArrowDown, ArrowUpRight, Check, Menu, X } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import { trackEvent } from '@/lib/analytics'
-
-const projects = [
-  { id: 'seqhort', name: 'Sequoia Horticultural Products', category: 'AGRICULTURE / BUSINESS WEBSITE', image: '/SeqHortScreenShot.webp', url: 'https://www.seqhort.com', color: 'sage', headline: 'An established business. A fresh digital presence.', description: 'A website for a bulk bark and mulch supplier, bringing its products and business information together in a clear, approachable experience.' },
-  { id: 'blairelectric', name: 'Blair Electric Services', category: 'TRADES / BUSINESS WEBSITE', image: '/BlairElectricScreenShot.webp', url: 'https://blairelectric.pages.dev', color: 'sand', headline: 'Making a skilled local business easy to discover.', description: 'A website introducing an electrical contractor’s services to agricultural, commercial, and industrial customers in California’s Central Valley.' },
-  { id: 'waterspectrum', name: 'WaterSpectrum', category: 'MUSIC / CREATIVE WEBSITE', image: '/WaterSpectrumScreenShot.webp', url: 'https://waterspectrum.us', color: 'lavender', headline: 'A digital home with its own creative energy.', description: 'A website for a music production collective, bringing beats, studio sessions, mixing, and mastering into one distinctive online presence.' },
-]
+import Experience from '@/components/experience/Experience'
+import ChapterRail from '@/components/experience/ChapterRail'
+import WorkShowcase from '@/components/WorkShowcase'
 
 const faqs = [
   ['What kind of businesses do you work with?', 'I build websites for small and growing businesses, from local service providers to creative brands. If you need a new site or your current one no longer represents your business, let’s talk.'],
@@ -33,7 +30,9 @@ function ProjectLink({ id, url, children, className }: { id: string; url: string
 export default function StudioHome() {
   const [menuOpen, setMenuOpen] = useState(false)
   return <div className="studio">
+    <Experience />
     <a className="studio-skip" href="#main-content">Skip to content</a>
+    <ChapterRail />
     <header className="studio-header"><div className="studio-container nav-inner"><Brand />
       <nav id="studio-navigation" className={menuOpen ? 'studio-nav is-open' : 'studio-nav'} aria-label="Main navigation">
         {[['Work', '#work'], ['Services', '#services'], ['About', '#about']].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
@@ -50,10 +49,7 @@ export default function StudioHome() {
       </div><div className="studio-container hero-bottom"><span>Thoughtful design. Built around you.</span><span>WEB DESIGN <i/> DEVELOPMENT <i/> SEO</span><a href="#work" aria-label="Explore selected work"><ArrowDown size={20}/></a></div></section>
       <section id="work" className="studio-work section-alt"><div className="studio-container">
         <div className="section-heading"><div><p className="eyebrow">01 / SELECTED WORK</p><h2>Different businesses.<br/><span className="serif-accent">Distinctive websites.</span></h2></div><p>A few digital homes I’ve built.<br/>Each with a story of its own.</p></div>
-        <div className="project-grid">{projects.map((project, i) => <article className={`project project-${project.color} ${i === 0 ? 'project-featured' : ''}`} key={project.id}>
-          <ProjectLink id={project.id} url={project.url} className="project-image-link"><div className="project-image-stage"><div className="browser-chrome"><span/><span/><span/><small>{new URL(project.url).hostname}</small></div><div className="project-image"><Image src={project.image} alt={`${project.name} website design`} fill sizes={i === 0 ? '(max-width: 760px) 90vw, 85vw' : '(max-width: 760px) 90vw, 42vw'} className="project-screenshot"/></div><span className="project-open"><ArrowUpRight size={24}/></span></div></ProjectLink>
-          <div className="project-info"><div><p className="eyebrow">{project.category}</p><h3><ProjectLink id={project.id} url={project.url}>{project.name}</ProjectLink></h3><p className="project-headline">{project.headline}</p></div><p className="project-description">{project.description}</p></div>
-        </article>)}</div>
+        <WorkShowcase />
         <div className="more-work"><p>Also exploring what software can do.</p><ProjectLink id="statsync" url="https://sportsync.rhodai.ai/">STATSYNC <ArrowUpRight size={16}/></ProjectLink><ProjectLink id="vmux" url="https://github.com/Shadowfear36/vmux">vmux <ArrowUpRight size={16}/></ProjectLink><ProjectLink id="seghiero" url="https://github.com/Shadowfear36/SegHiero">SegHiero <ArrowUpRight size={16}/></ProjectLink></div>
       </div></section>
       <section id="services" className="studio-services"><div className="studio-container"><div className="section-heading"><div><p className="eyebrow">02 / WHAT I CAN HELP WITH</p><h2>A better website.<br/><span className="serif-accent">A stronger first impression.</span></h2></div><p>From a fresh start to a thoughtful redesign,<br/>let’s make your next step a good one.</p></div>
