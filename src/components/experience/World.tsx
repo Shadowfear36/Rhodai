@@ -23,7 +23,7 @@ function Scene({ lowPower }: { lowPower: boolean }) {
 
       <Rig read={readChapter} />
       <Crystal mode="intro" position={narrow ? [0, -1.7, 0] : [3.1, 0.15, 0]} scale={narrow ? 0.72 : 1} />
-      <Crystal mode="finale" position={[narrow ? 0 : -0.55, narrow ? -1.45 : 0.2, chapterZ(LAST_CHAPTER) - 18]} scale={narrow ? 0.45 : 0.5} />
+      <Crystal mode="finale" position={[narrow ? 0 : -0.3, narrow ? -1.45 : 0.2, chapterZ(LAST_CHAPTER) - 18]} scale={narrow ? 0.45 : 0.5} />
       <HexFloor />
       <Particles count={lowPower ? 800 : 1600} />
       <Portals />

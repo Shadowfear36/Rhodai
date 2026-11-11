@@ -99,7 +99,7 @@ export default function Logo({ size = 36, showWordmark = true, className }: Logo
       {showWordmark && (
         <span
           className="text-lg font-bold tracking-tight leading-none"
-          style={{ fontFamily: 'var(--font-space-grotesk)' }}
+          style={{ fontFamily: 'var(--font-tektur)' }}
         >
           <span className="text-white">Rho</span>
           <span className="text-cyan-400">dai</span>

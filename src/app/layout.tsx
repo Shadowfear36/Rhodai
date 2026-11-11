@@ -1,23 +1,23 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Tektur } from 'next/font/google'
 import './globals.css'
 import Analytics from '@/components/Analytics'
 
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-const spaceGrotesk = Space_Grotesk({
-  variable: '--font-space-grotesk',
+const display = Tektur({
+  variable: '--font-tektur',
   subsets: ['latin'],
   display: 'swap',
   weight: ['400', '500', '600', '700'],
 })
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: '--font-jetbrains-mono',
+const body = Geist({
+  variable: '--font-geist',
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const mono = Geist_Mono({
+  variable: '--font-geist-mono',
   subsets: ['latin'],
   display: 'swap',
   weight: ['400', '500'],
@@ -121,7 +121,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
+      className={`${display.variable} ${body.variable} ${mono.variable}`}
     >
       <head>
         <meta name="theme-color" content="#050508" />
